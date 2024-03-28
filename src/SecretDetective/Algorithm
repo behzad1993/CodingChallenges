@@ -1,0 +1,14 @@
+Input: tripletList [][]
+
+create List
+Loop over tripletList -> get charList[]
+    insertBefore(List, charList[0], charList[1], charList[2])
+    insertBefore(List, charList[1], charList[2], null)
+    insertBefore(List, charList[2], null, null)
+
+function insertBefore(List, first, second, third):
+        if: List contains seconds -> insert first before second
+        else if: List contains third -> insert first before third
+        else if: List contains first -> continue
+        else: insert First at end of List
+
