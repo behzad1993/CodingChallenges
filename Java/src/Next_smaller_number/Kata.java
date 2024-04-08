@@ -14,26 +14,12 @@ public class Kata {
                 .map(Character::getNumericValue)
                 .toArray();
 
+
+
         List<Integer> subNArray = createSublistFromArray(nArray, 1, nArray.length - 1);
         subNArray.sort(Collections.reverseOrder());
 
-        for (int i = 1; i < nArray.length; i++) {
-            nArray[i] = subNArray.removeFirst();
-        }
-
-        int result = createInteger(nArray);
-
-//        for (int i = 2; i < nArray.length; i++) {
-//            int swap = nArray[i - 1];
-//            int swapWith = nArray[i];
-//            if (swapWith > swap) {
-//                nArray[i - 1] = swapWith;
-//                nArray[i] = swap;
-//            }
-//        }
-
-        int i = (result < n) ? result : -1;
-        return i;
+        return -1;
     }
 
     private static void sortList(ArrayList<Integer> intList) {
